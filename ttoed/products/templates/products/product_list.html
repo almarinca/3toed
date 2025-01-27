@@ -1,0 +1,13 @@
+<h1>Products</h1>
+<ul>
+{% for product in product_list %}
+    <li>{{ product.name }} - ${{ product.price }}</li>
+    
+    {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 150px;">
+    {% endif %}
+        
+{% empty %}
+    <li>No products yet.</li>
+{% endfor %}
+</ul>
