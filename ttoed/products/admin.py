@@ -4,7 +4,7 @@ from .models import Product
 
 class ProductAdmin(admin.ModelAdmin):
     model = Product
-    list_display = ['name', 'price']
+    list_display = ['name', 'price', 'created_at']
     search_fields = ['name']
 
 admin.site.register(Product, ProductAdmin)
