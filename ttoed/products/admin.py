@@ -4,5 +4,6 @@ from .models import Product
 
 class ProductAdmin(admin.ModelAdmin):
     model = Product
+    list_display = ['name', 'price']
 
 admin.site.register(Product, ProductAdmin)
